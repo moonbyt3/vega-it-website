@@ -1,0 +1,31 @@
+@import 'config/reset';
+@import 'config/variables';
+@import 'base/base';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/forms';
+
+@import 'partials/shared-main';
+@import 'partials/shared-header';
+@import 'partials/module-sticky-header';
+@import 'partials/shared-navigation';
+@import 'partials/module-slider';
+@import 'partials/module-articles';
+@import 'partials/module-standards';
+@import 'partials/module-board-of-directors';
+@import 'partials/module-materials';
+@import 'partials/module-navigation-plus';
+@import 'partials/module-about';
+@import 'partials/shared-footer';
+@import 'partials/module-modal';
+@import 'helpers/helper-classes';
+@import 'helpers/icons';
+
+//design provided is for 1400px width screen
+//center whole page and set it to 1400px width  
+@media only screen and (min-width: 1401px) {
+    body {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}

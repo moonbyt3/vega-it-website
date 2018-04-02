@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+## Variables
+--------------------------------------------------------------*/
+// Fonts
+$font-default-serif: Georgia, serif;
+$font-default-sans-serif: Arial, Helvetica, sans-serif;
+
+$font-main: 'Open Sans', $font-default-sans-serif;
+
+// Colors
+$white: #fff;
+$black: #000;
+$grey: #f4f4f4;
+$grey-light: #fbfbfb;
+$grey-dark: #9a9a9a;
+$grey-darker: #666666;
+$gold: #c1a462;
+$purple: #6c4a8b;
+$rose: #ef798a;
+$blue-dark: #1073c7;
+$blue-light: #53c1f2;
+$yellow: #fcc401;
+$orange: orange;
+
+$color-main: $grey-dark;
+$color-footer: #f7f7f7;
+$color-footer-dark: #cecece;
+
+$color-form: #333333;
+$color-form-dark: #272727;
+
+.bgc-purple {
+    background-color: $purple;
+}
+.bgc-rose {
+    background-color: $rose;
+}
+.bgc-blue-dark {
+    background-color: $blue-dark;
+}
+.bgc-blue-light {
+    background-color: $blue-light;
+}
+.bgc-yellow {
+    background-color: $yellow;
+}
+
+
+// Transitions
+$dur: 350ms;
+$ease: ease;
+
+// Breakpoints
+$phone: 640;
+$tablet: 1199;
+$lap-small: 1250;
+$lap-large: 1400;
+

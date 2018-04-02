@@ -1,0 +1,144 @@
+.wrapper-materials {
+    margin: 0 60px;
+}
+.materials-not-supported-text {
+    font-size: 20px;
+    width: 725px;
+    text-align: center;
+    margin: 42px auto;
+    letter-spacing: 0px;
+}
+.materials-not-supported-search-form {
+    display: inline-flex;
+    width: 725px;
+    margin: 80px auto 0 auto;
+    input {
+        width: 92%;
+        font-size: 18px;
+        border: 1px solid $grey-dark;
+        transition: ease-in 0.3s;
+        &:hover {
+            border: 1px solid black;
+        }
+    }
+}
+.materials-table {
+    margin-top: 45px;
+    display: table;
+    border-collapse: collapse;
+}
+.materials-table-row {
+    display: table-row;
+}
+.materials-table-row:hover {
+    background-color: $grey;
+    color: $blue-light;
+}
+.materials-table-header {
+    text-align: left;
+    
+}
+.materials-table-header-data {
+    display: table-cell;
+    padding: 27px 23px;
+    a {
+        color: $purple;
+        font-weight: 600;
+    }
+}
+.materials-table-header:nth-child(2) {
+    padding-left: 48px;
+}
+.materials-table-data {
+    display: table-cell;
+    padding: 27px 23px;
+    border: 1px solid black;
+}
+.material-number {
+    white-space: nowrap;
+}
+
+//apply css only to Name column
+.material-name {
+    position: relative;
+    width: 100%;
+    
+    &:hover {
+        color: $blue-dark;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+.material-name-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+//tablet screen
+@media only screen and (max-width: 769px) and (min-width: 470px) { 
+    .wrapper-materials {
+        margin: 0 21px;
+    }
+    .materials-not-supported-text {
+        font-size: 19px;
+        margin: 29px 0px;
+        letter-spacing: 0px;
+        line-height: 29px;
+    }
+    .materials-not-supported-search-form {
+        margin: 36px auto 0 auto;
+    }
+    .materials-table {
+        margin-top: 35px;
+        .materials-table-header {
+            padding-bottom: 12px;
+        }
+    }
+}
+
+//mobile screen 
+@media only screen and (max-width: 460px) and (min-width: 320px) { 
+    .router-tittle {
+        background-color: $white;
+        span {
+            display: none;
+        }
+    }
+    .wrapper-materials {
+        margin: 0 20px;
+    }
+    .materials-not-supported-text {
+        width: auto;
+        font-size: 15px;
+        margin: 25px auto;
+        line-height: 24px;
+    }
+    .materials-not-supported-select {
+        select {
+            margin: 0 auto;
+        }
+    }
+    .materials-not-supported-search-form {
+        width: 100%;
+        margin: 28px auto 0 auto;
+        input {
+            font-size: 14px;
+            padding: 9px;
+        }
+    }
+    .materials-table {
+        margin-top: 36px;
+        .materials-table-header {
+            padding-bottom: 10px;
+        }
+        .materials-table-data {
+            font-size: 14px;
+            padding: 8px 13px;
+        }
+        .material-name {
+            padding-left: 26px;
+        }
+        
+    }
+}

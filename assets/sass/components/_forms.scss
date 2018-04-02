@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+## Forms
+--------------------------------------------------------------*/
+input {
+    padding: 16px;
+}
+
+
+.about-contact-form {
+    position: relative;
+    height: 1045px;
+    padding: 70px 60px;
+    background-color: $color-form;
+    margin-bottom: -5px;
+}
+.about-contact-form-heading {
+    font-size: 27px;
+}
+.about-contact-form-text {
+    display: block;
+    margin-top: 13px;
+    font-size: 19px;
+    letter-spacing: -1px;
+    color: $white;
+}
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 70px;
+    input {
+        width: 100%;
+        margin-bottom: 25px;
+        background-color: $color-form-dark;
+        border: 1px solid black;
+        color: $grey;
+        &:hover {
+            border: 1px solid $grey-dark;
+        }
+    }
+}
+.contact-form-left-section {
+    width: 50%;
+    input {
+        width: 90%;
+    }
+}
+.contact-form-right-section {
+    width: 50%;
+    padding-left: 65px;
+    
+}
+.contact-form-message {
+    margin-bottom: -5px;
+    input {
+        padding-bottom: 120px !important;
+    }
+}
+.form-label {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.contact-form-message {
+    display: block;
+    width: 100%;
+}
+.contact-form-newsletter {
+    width: 100%;
+    input {
+        width: initial;
+    }
+}
+
+//tablet screen
+@media only screen and (max-width: 769px) {
+    .contact-form {
+        margin-top: 60px;
+        
+        input {
+            padding: 20px 0px 15px 19px;
+            margin-bottom: 24px;
+        }
+    }
+    .about-contact-form {
+        height: 1406px;
+        padding: 42px 20px;
+    }
+    .contact-form-left-section {
+        width: 100%;
+        input {
+            width: 100%;
+        }
+    }
+    .contact-form-right-section {
+        width: 100%;
+        padding-left: 0;
+    }
+    
+}
+
+//mobile screen 
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+    .about-contact-form {
+        height: 1530px;
+    }
+    .about-contact-form-heading {
+        font-size: 21px;
+    }
+    .about-contact-form-text {
+        font-size: 17px;
+    }
+    .contact-form {
+        margin-top: 52px;
+        .half-space {
+            width: 100% !important;
+            margin-left: initial;
+        }
+    }
+    
+}

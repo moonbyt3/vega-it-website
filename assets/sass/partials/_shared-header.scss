@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 100px;
+    overflow: hidden;
+    border-bottom: 1px solid $grey;
+    transition: .3s ease;
+    z-index: 4;
+    width: 100%;
+    background-color: $white;
+    
+}
+.header-logo {
+    position: absolute;
+    padding: 20px 0 20px 60px;
+    img {
+        height: 60px;
+    }
+}
+.search {
+    float: right;
+    //to prevent border on hover to go out of the element
+    max-height: 100px;
+    padding: 30px 88px 30px 19px;
+    font-size: 33px;
+}
+.searchbox {
+    display: none;
+    width: 100%;
+    height: 96px;
+    position: fixed;
+    top: 100px;
+    input {
+        width: 100%;
+        font-size: 20px;
+        border-left: none;
+        border-right: none;
+    }
+    .search {
+        background-color: $white;
+        border-left: none;
+    }
+}
+
+//tablet screen
+@media only screen and (max-width: 769px) {
+    .header {
+        width: 100%;
+    }
+    .header-logo {
+        padding: 28px 0 0 20px;
+        img {
+            height: 40px;
+        }
+    }
+    .search {
+        padding: 31px 23px 31px 13px;
+    }
+    .searchbox {
+        input {
+            font-size: 30px;
+        }
+    }
+}
+
+//mobile screen 
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+    .header {
+        height: 80px;
+    }
+    .header-logo {
+        img {
+            height: 28px;
+            padding: 0px 0 0 0px;
+        }
+    }
+    .search {
+        padding: 22px 16px 0 20px;
+        min-height: 80px;
+    }
+    .searchbox {
+        top: 80px;
+        input {
+            max-width: 600px;
+        }
+    }
+}
+
+//screens bigger than 1400px
+
+@media only screen and (min-width: 1401px) {
+    
+}

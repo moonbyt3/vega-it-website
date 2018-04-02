@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Vega IT | About VEGA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	
+	
+				
+</head>
+<body>
+	<!-- Header -->
+	<header class="header" id="header">
+		<div class="header-logo">
+			<a href="./index.html"><img src="./images/logo.png" alt="Logo image"></a>
+		</div>
+
+		<span id="mobile-nav-button" class="button-navigation-mobile icon-menu"></span>
+		
+		<span class="button-open-search button-nav icon-search" id="open-search-button"></span>
+
+		<nav class="navigation" >
+			<ul id="navigation" class="navigation-big clearfix">
+				<li><a class="button-nav" href="javascript:;">About VEGA</a></li>
+				<li><a class="button-nav" href="javascript:;">About Fragrances</a></li>
+				<li><a class="button-nav" href="javascript:;">Newsroom</a></li>
+				<li><a class="button-nav" href="javascript:;">Standards</a></li>
+				<li><a class="button-nav" href="javascript:;">Regulations</a></li>
+			</ul>
+		</nav>
+
+		<form id="search-bar" class="searchbox">
+			<input type="search" placeholder="Search...">
+			<span class="button-search icon-search">
+			</span>
+		</form>
+	</header>
+	
+	<!-- Main -->
+	<main>
+        <nav class="navigation-plus navigation-plus-about clearfix">
+            <ul>
+                <li class="nav-item-active"><a href="javascript:;">VegaIT</a></li>
+                <li><a href="javascript:;">Membership</a></li>
+                <li><a href="board.html">Board of directors</a></li>
+                <li><a href="javascript:;">VEGA team</a></li>
+                <li><a href="javascript:;">Contact us</a></li>
+            </ul>
+            <select name="navigation-plus-mobile" class="navigation-plus-mobile" id="navigation-plus-mobile">
+                <option value="">VegaIT</option>
+                <option value="director2">Membership</option>
+                <option value="director3">Board of directors</option>
+                <option value="director4">VEGA team</option>
+                <option value="director5">Contact us</option>
+            </select>
+        </nav>
+        <div class="router-tittle">
+            <h1 class="board-tittle">About VEGA</h1>
+        </div>
+        <div class="wrapper-about">
+            <div class="about-article-group">
+                <div class="about-article">
+                    <h2 class="about-article-heading">VEGA</h2>
+                    <div class="about-article-text"><p>Vega was founded in 1973 in Geneva to represent the collective interests of the fragrance industry. Its main purpose is to promote the safe enjoyment of fragrances worldwide.</p></div>
+                    <a href="javascript:;" class="about-article-read-more">Read more about IFRA</a>
+                </div>
+                <div class="about-article-picture">
+                    <h3 class="about-article-picture-heading">Code of practice</h3>
+                    <a href="javascript:;"><span class="about-article-picture-icon icon-download"></span></a>
+                </div>
+            </div>
+
+            <div class="about-article-group about-second-group about-article-swap">
+                <div class="about-article">
+                    <h2 class="about-article-heading">RIFM</h2>
+                    <div class="about-article-text"><p>The Research Institute for Fragrance Materials (RIFM) was formed in 1966 to analyze, evaluate and distribute scientific data, cooperate with official agencies and encourage safety standards for the use of fragrance ingredients.</p></div>
+                    <a href="javascript:;" class="about-article-read-more">Read more about RIFM</a>
+                </div>
+                <div class="about-article-picture">
+                    <h3 class="about-article-picture-heading">Visit VEGA</h3>
+                    <a href="javascript:;"><span class="about-article-picture-icon icon-link"></span></a>
+                </div>
+            </div>
+
+            <div class="about-article-group about-third-group">
+                <div class="about-article">
+                    <h2 class="about-article-heading">Membership</h2>
+                    <div class="about-article-text"><p>The International Fragrance Association (IFRA) consists of an international body - IFRA - and a network of four regional bodies and 17 national associations worldwide. IFRA is regisered in Switzerland and has its operational centre in Brussels, Belgium.</p></div>
+                    <a href="javascript:;" class="about-article-read-more">Read more about membership</a>
+                </div>
+                <div class="about-article-picture">
+                    
+                </div>
+            </div>
+
+            <div class="about-location">
+                <!-- map api key: AIzaSyDmeQz0sT5DVQjRg_nR9nKpWdxOPNEAe6s -->
+                <div class="about-location-map" id="google-map">
+                        
+                </div>
+                <div class="about-location-text">
+                    <h3 class="about-location-text-heading">VEGA head office</h3>
+                    <ul>
+                        <li>Rue du Marche 9</li>
+                        <li>1204 Geneva</li>
+                        <li>Switzerland</li>
+                    </ul>
+                    <div class="about-location-phone">
+                        <span>T:</span><a href="javascript:;">+41 22 431 82 50</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="about-contact-form">
+                <h1 class="about-contact-form-heading">To contact us by e-mail, just fill in the form below.</h1>
+                <span class="about-contact-form-text">We will attend to your message as soon as possible.</span>
+                <form class="contact-form" action="javascript:;" onsubmit="return validateForm()">
+                    <div class="contact-form-left-section">
+                        <span class="form-label">Personal information</span>
+                        <input type="text" placeholder="First name *" name="fName">
+                        <input type="text" placeholder="Last name *" name="lName">
+                        <span class="form-label">Company information</span>
+                        <input type="text" placeholder="Company *" name="company">
+                        <input type="text" placeholder="Function" name="function">
+                    </div>
+                    <div class="contact-form-right-section">
+                        <span class="form-label">Contact information</span>
+                        <input type="text" placeholder="E-mail *" name="email">
+                        <input type="text" placeholder="Phone" name="phone">
+                        <input type="text" placeholder="Street" name="street">
+                        <input class="half-space" type="text" placeholder="City" name="city"> <input class="half-space" type="text" placeholder="Postal code">
+                        <input type="text" placeholder="Country" name="country">
+                    </div>
+                    <div class="contact-form-message">
+                        <input type="text" placeholder="Your message to us *" name="message">
+                    </div>
+                    <div class="contact-form-newsletter">
+                        <input type="checkbox" name="newsletter" id="newsletter-chkbox"> <span>I would like to recieve newsletter</span>
+                    </div>
+                    <a href="javascript:;" class="button button-contact-form" onclick="">Send<span class="icon-arrow"></span></a>
+                </form>
+            </div>
+        </div>
+	</main>
+	<footer class="footer clearfix">
+		<div class="wrapper-locations">
+			<div class="location">
+				<h4 class="location-heading">IFRA head office</h4>
+				<ul class="location-address">
+					<li>Rue du Marche 9</li>
+					<li>1204 Geneva</li>
+					<li>Switzerland</li>
+				</ul>
+				<div class="location-phone">
+					<span>T</span>
+					<a href="tel:+41224318250" class="location-phone-number">+41 22 431 82 50</a>
+				</div>
+			</div>
+			<div class="location location-second">
+				<h4 class="location-heading">IFRA operations</h4>
+				<ul class="location-address">
+					<li>Avenue des Arts 6</li>
+					<li>1210 Brussels</li>
+					<li>Belgium</li>
+				</ul>
+				<div class="location-phone">
+					<span>T</span>
+					<a href="tel:+3222142060" class="location-phone-number">+32 (0)2 214 20 60</a>
+				</div>
+				</div>
+		</div>
+
+		<div class="nav-bottom">
+			<ul class="nav-bottom-menu">
+				<li><a href="javascript:;">About IFRA</a></li>
+				<li><a href="javascript:;">Newsroom</a></li>
+				<li><a href="javascript:;">Sitemap</a></li>
+				<li><a href="javascript:;">Disclaimer</a></li>
+			</ul>
+		</div>
+	</footer>
+	
+    <script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./assets/js/slick/slick.min.js"></script>
+	<script src="assets/js/main.js"></script>
+    <script src="assets/js/formValidation.js"></script>
+    <script>
+        function initMap() {
+            var uluru = {lat: 46.203665, lng: 6.146693};
+            var map = new google.maps.Map(document.getElementById('google-map'), {
+            zoom: 17,
+            center: uluru
+            });
+            var markerIcon = '../../images/pin.png';
+            var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: markerIcon
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmeQz0sT5DVQjRg_nR9nKpWdxOPNEAe6s&callback=initMap">
+    </script>
+	
+
+</body>
+</html>

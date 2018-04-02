@@ -1,0 +1,65 @@
+/*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+
+.navigation {
+    border-right: 1px solid gray;
+    float: right;
+    li {
+        float: left;
+        a {
+            position: relative;
+            &:hover {
+                &::after {
+                    border-bottom: 4px solid $blue-light;
+                    text-align: center;
+                    transition: ease .3s;
+                }
+            }
+        }
+        a::after {
+            content: '';
+            display:block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 0 solid $blue-light;
+        }
+        
+    }
+}
+
+
+//mobile screen
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+    .navigation-big {
+        display: none;
+        position: fixed;
+        margin-top: 80px;
+        background: $blue-light;
+        left: 0;
+        li {
+            display: block;
+            width: 100%;
+            a {
+                padding: 11px 20px;
+                font-size: 21px;
+                min-height: initial;
+                color: $white;
+                border-bottom: 1px solid $white;
+            }
+        }
+    }
+    .button-navigation-mobile {
+        position: absolute;
+        right: 70px;
+        padding: 18px 12px;
+        font-size: 30px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+

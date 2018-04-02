@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.footer {
+    background-color: $color-footer;
+    transition: height .6s ease-out .6s;
+}
+.wrapper-locations {
+    float: left;
+    width: 64%;
+    
+    border-top: 1px solid $color-footer-dark;
+}
+.location {
+    float: left;
+    width: 24%;
+    margin: 53px 0px 0 60px;
+}
+.location-heading {
+    font-size: 15px;
+    font-weight: 800;
+}
+.location-address { 
+    margin: 30px 2px;
+    font-size: 15px;
+    line-height: 17px;
+    li {
+        margin: 10px 0;
+    }
+}
+.location-phone {
+    span {
+        font-weight: 600;
+        color: black;
+    }
+}
+.location-phone-number {
+   color: $color-footer-dark;
+    
+}
+.location-second {
+    margin: 53px 16px;
+}
+.nav-bottom {
+    display: inline-block;
+    width: 36%;
+    height: 276px;
+    border-top: 1px solid $color-footer-dark;
+    text-align: right;
+}
+.nav-bottom-menu {
+    li {
+        float: left;
+        margin: 55px 30px;
+        margin: 52px 39px 0 10px;
+        font-weight: 600;
+        font-size: 15px;
+        a {
+            &::after {
+                content: '';
+                display: block;
+                position: relative;
+                border-bottom: 1px solid black;
+                width: 0%;
+                transition: ease-in 0.3s;
+                margin: 0 0 0 auto;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                    text-align: center;
+                    margin: 0 auto 0 0;
+                    
+                }
+            }
+        }
+        
+    }
+    
+}
+//tablet screen
+@media only screen and (max-width: 769px) {
+    .wrapper-locations {
+        width: 70%;
+    }
+    .location {
+        width: 35%;
+        margin: 49px 20px;
+    }
+    .location-phone {
+        font-size: 15px;
+        padding: 4px 1px;
+    }
+    .nav-bottom {
+        width: 29%;
+        height: 276px;
+        li {
+            float: none;
+            margin: 10px 25px;
+        }
+    }
+    .nav-bottom-menu {
+        padding-top: 40px;
+        line-height: 21px;
+        margin-right: -6px;
+        a::after {
+            position: absolute;
+            width: 100%;
+            right: 0;
+            
+        }
+    }
+}
+
+//mobile screen 
+
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+    .location-heading {
+        font-size: 14px;
+    }
+    .location {
+        font-size: 12px;
+        width: 40%;
+        margin: 25px 0 0 20px;
+    }
+    .location-second {
+        margin: 25px 0 0 16px;
+    }
+    .wrapper-locations {
+        width: 100%;
+    }
+    .location-heading {
+        font-size: 12px;
+    }
+    .location-address {
+        li {
+            font-size: 13px;
+        }
+    }
+    .location-phone-number {
+        font-size: 13px;
+    }
+    .nav-bottom {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        height: auto;
+        
+        ul {
+            padding-top: 0;
+        }
+        li {
+            float: left;
+            margin: 6px 10px -5px 10px;
+            font-size: 14px;
+        }
+        a::after {
+            position: initial;
+        }
+    }
+}

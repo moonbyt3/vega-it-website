@@ -1,0 +1,217 @@
+
+#board-of-dirs {
+    display: none;
+}
+.board-member-buttons {
+    display: inline-flex;
+    button {
+        margin: 10px;
+    }
+}
+.board-wrapper {
+    padding: 48px 60px;
+    background-color: $grey-light;
+}
+.board-member-table {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1;
+    transition: 1s ease;
+}
+.board-member-row {
+    display: table-row;
+}
+.board-member {
+    min-height: 446px;
+    width: 25%;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: $grey-dark;
+    color: lighten($grey-dark, 20);
+    background-color: $white;
+    transition: 1s ease;
+    opacity: 1;
+    visibility: visible;
+    
+}
+.board-member-hide {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+}
+.board-member:nth-child(-n+4) {
+    border-top-width: 1px;
+}
+.board-member:nth-child(4n+1) {
+    border-left-width: 1px;
+}
+.board-member-picture-wrapper {
+    overflow: hidden;
+    margin: 10px;
+}
+.board-member-picture {
+    
+    width: 100%;
+    height: auto;
+    transition: .3s ease;
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+.board-member-content {
+    position: relative;
+    margin: 20px 30px;
+}
+.board-member-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $grey-darker;
+    
+    &::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid $grey-dark;
+        width: 0%;
+        transition: .3s ease;
+    }
+    &:hover {
+        cursor: pointer;
+        &::after {
+            width: 80%;
+        }
+    }
+}
+.board-member-position {
+    margin-top: 10px;
+    padding-bottom: 25px;
+    &:after {
+        content: '';
+        border-bottom: 1px solid $grey-dark;
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+.board-member-info {
+    margin-top: 27px;
+    li {
+        margin: 5px 0;
+    }
+}
+.social-icon {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    font-size: 20px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.social-icon::before {
+    content: '\eac9';
+    font-family: 'icomoon';
+    color: $blue-dark;
+}
+.board-members-hide {
+    opacity: 0;
+}
+
+//tablet screen
+@media only screen and (max-width: 768px) {
+    .router-tittle {
+        height: 80px;
+        padding: 22px 20px;
+        font-size: 11px;
+    }
+    .board-wrapper {
+        margin: 30px 0 41px 19px;
+        padding: 0;
+    }
+    .board-member {
+        min-height: 253px;
+        width: 182px;
+    }
+    .board-member-picture {
+        width: 180px;
+        height: 120px;
+        padding: 5px;
+    }
+    .board-member-content {
+        margin: 0px 10px;
+    }
+    .board-member-name {
+        font-size: 15px;
+        font-weight: 800;
+        color: darken($grey-dark, 30)
+    }
+    .board-member-position {
+        margin-top: 0;
+        padding-bottom: 10px;
+        font-size: 14px;
+        &::after {
+            margin-top: 10px;
+        }
+        
+    }
+    .board-member-info {
+        margin-top: 0;
+        font-size: 13px;
+    }
+}
+
+//mobile screen 
+@media only screen and (max-width: 425px) {
+    .navigation-plus-board {
+        display: none;
+    }
+    .router-tittle {
+        .board-tittle {
+            display: none;
+        }
+    }
+    #board-of-dirs {
+        display: block;
+        width: 100%;
+        padding: 9px 7px;
+        font-size: 13px;
+    }
+    .board-member-buttons {
+        display: block;
+    }
+    .board-wrapper {
+        margin: 20px 19px 10px 19px;
+    }
+    .board-member {
+        display: block;
+        min-height: 370px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-width: 1px 1px 1px 1px;
+    }
+    .board-member-content {
+        margin: 4px 10px;
+    }
+    .board-member-picture {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .board-member-name {
+        font-size: 16px;
+        margin-top: 0;
+        margin-left: 2px;
+        padding-bottom: 7px;
+    }
+    .board-member-position {
+        font-size: 16px;
+        padding-bottom: 17px;
+        &::after {
+            margin-top: 18px;
+        }
+    }
+    .board-member-info {
+        margin-top: 17px;
+        font-size: 16px;
+    }
+}

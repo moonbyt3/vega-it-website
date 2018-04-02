@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+## Base Layout
+--------------------------------------------------------------*/
+html, body {
+	height: 100%;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+main {
+	padding-top: 100px;
+}
+@media only screen and (max-width: 424px) and (min-width: 320px) { 
+	main {
+		padding-top: 80px;
+	}
+}

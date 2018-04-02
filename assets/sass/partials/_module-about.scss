@@ -1,0 +1,291 @@
+.navigation-plus-mobile {
+    display: none;
+}
+.about-article-group {
+    display: inline-flex;
+    min-height: 380px;
+    
+}
+.about-article {
+    width: 50%;
+    padding: 65px 60px;
+}
+.about-article-heading {
+    position: relative;
+    font-size: 40px;
+    &::after {
+        content: '';
+        display: block;
+        margin-top: 20px;
+        border-bottom: 1px solid black;
+        width: 20%;
+        transition: ease-in .3s;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+.about-article-text {
+    margin-top: 21px;
+    font-size: 19px;
+    letter-spacing: -1px;
+    line-height: 29px;
+}
+
+.about-article-read-more {
+    display: block;
+    margin-top: 37px;
+    color: $blue-dark;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: underline;
+}
+.about-article-picture {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    background: url('../../images/background1.jpg');
+}
+.about-article-picture-heading {
+    text-align: center;
+    color: #fff;
+    padding-top: 132px;
+    font-size: 30px;
+    letter-spacing: -1px;
+    &::after {
+        content: '';
+        border-bottom: 1px solid $white;
+        display: block;
+        width: 15%;
+        margin: 20px auto;
+        transition: ease-in .3s;
+    }
+    &:hover {
+        &::after {
+            width: 50%;
+        }
+    }
+}
+.about-article-picture-icon {
+    font-size: 21px;
+    color: $white;
+}
+.about-article-swap {
+    flex-direction: row-reverse;
+}
+.about-second-group {
+    min-height: 415px !important;
+    .about-article-picture {
+        background: url('../../images/background2.jpg');
+    }
+    .about-article-picture-heading {
+        padding-top: 150px;
+    }
+    .about-article-read-more {
+        margin-top: 28px;
+    }
+}
+
+.about-third-group {
+    min-height: 420px;
+    position: relative;
+    .about-article-picture {
+        background: url('../../images/background3.jpg');
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 5px solid $blue-light;
+    }
+    .about-article-read-more {
+        margin-top: 28px;
+    }
+}
+
+.about-location {
+    display: inline-flex;
+    width: 100%;
+}
+.about-location-map {
+    width: 50%;
+    height: 450px;
+    
+}
+.about-location-text {
+    width: 50%;
+    padding: 120px 0px 0 60px;
+    line-height: 30px;
+    ul {
+        margin-top: 30px;
+        li {
+            font-size: 18px;
+        }
+    }
+}
+.about-location-text-heading {
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 1px solid black;
+        bottom: 4px;
+        width: 24%;
+        transition: ease-in .3s;
+    }
+    &:hover {
+        &::after {
+            width: 50%;
+        }
+    }
+}
+.about-location-phone {
+    margin-top: 30px;
+    font-size: 19px;
+}
+
+//tablet screen
+@media only screen and (max-width: 769px) {
+    .about-article {
+        padding: 36px 20px 0 20px;
+    }
+    .about-article-group {
+        min-height: 340px;
+    }
+    .about-article-heading {
+        font-size: 30px;
+    }
+    .about-article-text {
+        margin-top: 26px;
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .about-article-picture-heading {
+        font-size: 23px;
+        padding-top: 119px;
+        letter-spacing: 1px;
+        &::after {
+            width: 26%;
+        }
+    }
+    .about-article-read-more {
+        margin-top: 53px;
+        font-size: 15px;
+    }
+    .about-second-group {
+        min-height: 350px !important;
+        .about-article {
+            padding: 46px 10px 0 17px;
+        }
+        .about-article-picture-heading {
+            padding-top: 127px;
+            
+        }
+    }
+    .about-third-group {
+        min-height: 381px !important;
+        .about-article {
+            padding: 50px 20px 0 17px;
+        }
+    }
+    .about-location-map {
+        height: 391px;
+    }
+    .about-location-text-heading {
+        color: $color-form;
+    }
+    .about-location-text {
+        padding: 88px 0px 0 117px;
+        ul {
+            text-align: center;
+            width: 57%;
+        }
+    }
+}
+
+//mobile screen 
+@media only screen and (max-width: 700px) and (min-width: 320px) {
+    .navigation-plus-about {
+        ul {
+            display: none;
+        }
+    }
+    .about-article-group {
+        display: block;
+    }
+    .about-article {
+        width: 100%;
+        padding: 25px 20px 0 20px;
+    }
+    .about-article-heading {
+        font-size: 25px;
+        &::after {
+            margin-top: 13px;
+            width: 40%;
+        }
+    }
+    .about-article-text {
+        margin-top: 14px;
+        font-size: 16px;
+    }
+    .about-article-read-more {
+        margin-top: 26px;
+        margin-bottom: 28px;
+    }
+    .about-article-picture {
+        width: 100%;
+        min-height: 280px;
+    }
+    .about-article-picture-heading {
+        font-size: 20px;
+        padding-top: 97px;
+        letter-spacing: 0px;
+        &::after {
+            margin: 14px auto;
+        }
+    }
+    .about-second-group {
+        .about-article {
+            padding: 24px 10px 0 17px;
+        }
+        .about-article-text {
+            letter-spacing: 0px;
+        }
+        .about-article-picture-heading {
+            padding-top: 97px;
+        }
+    }
+    .about-third-group {
+        .about-article {
+            padding: 14px 20px 0 17px;
+        }
+        .about-article-text {
+            letter-spacing: 0;
+        }
+    }
+    .about-location {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-location-text {
+        width: 100%;
+        padding: 27px 0px 23px 85px;
+        ul {
+            text-align: center;
+            width: 69%;        
+        }
+    }
+    .about-location-map {
+        width: 100%;
+        height: 280px;
+        iframe {
+            height: 280px !important;
+        }
+    }
+}
