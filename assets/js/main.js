@@ -1,67 +1,82 @@
 jQuery(function($) {
-
-    // sticky header
-    window.onscroll = function() {stickyHeader()};
-    const header = document.getElementById('header');
-    const headerOffset = 100; // in pixels
     
+    /*cache dom*/
+	const $dom = {
+        openSearchButton: $('#open-search-button'),
+        searchIcon: $('#open-search-icon'),
+        searchBar: $('#search-bar'),
+        header: $('#header'),
+        headerOffset: 100,
+        navigation: $('#navigation'),
+        mobileNavMenuButton: $('#mobile-nav-button')
+    };
+
+    /*cache classes*/
+    const classes = {
+        iconMenu: 'icon-menu',
+        iconSearch: 'icon-search',
+        iconClose: 'icon-close'
+    };
+
+    const attr = {
+        hidden: 'hidden'
+    };
+
+    /*functions*/
     function stickyHeader() {
-        if (window.pageYOffset >= headerOffset) {
-            header.classList.add('sticky');
+        if (window.pageYOffset >= $dom.headerOffset) {
+            $dom.header.addClass('sticky');
         } else {
-            header.classList.remove('sticky');
+            $dom.header.removeClass('sticky');
         }
     }
+    /*bind events*/
+
+    // sticky header
+    window.onscroll = () => stickyHeader();
     // search bar show/hide toggle
-    {
-        const openSearchButton = document.getElementById('open-search-button');
-        const searchIcon = document.getElementById('open-search-icon');
-        const searchBar = document.getElementById('search-bar');
-        let isHidden = true;
-
-        openSearchButton.addEventListener('click', function() {
-            if (isHidden === true) {
-                searchBar.removeAttribute('hidden');
-                searchBar.style.display = 'inline-flex';
-
-                openSearchButton.classList.remove('icon-search');
-                openSearchButton.classList.add('icon-close');
-                openSearchButton.style.backgroundColor = '#fbfbfb'; //$grey-light color
-                openSearchButton.style.borderBottom = '4px solid #53c1f2'; //$blue-light color
-                
-                isHidden = !isHidden;
-            } else {
-                searchBar.setAttribute('hidden', 'true');
-                searchBar.style.display = 'none';
-
-                openSearchButton.classList.remove('icon-close');
-                openSearchButton.classList.add('icon-search');
-                openSearchButton.style.backgroundColor = '#fff'; 
-                openSearchButton.style.borderBottom = 'none';
-                isHidden = !isHidden;
-            }
-        })
     
-    }
-    // //Mobile navigation
-    {
-        const mobileNavMenuButton = document.getElementById('mobile-nav-button');
-        const navigation = document.getElementById('navigation');
-        let isHidden = true;
+    let isHidden = true;
 
-        mobileNavMenuButton.addEventListener('click', function(){
-            if (isHidden === true) {
-                mobileNavMenuButton.classList.remove('icon-menu');
-                mobileNavMenuButton.classList.add('icon-close');
-                navigation.style.display = 'block';
-                isHidden = !isHidden;
-            } else {
-                mobileNavMenuButton.classList.remove('icon-close');
-                mobileNavMenuButton.classList.add('icon-menu');
-                navigation.style.display = 'none';
-                isHidden = !isHidden;
-            }
-        })
-    }
+    $dom.openSearchButton.on('click', function() {
+        if (isHidden === true) {
+            $dom.searchBar.removeAttr(attr.hidden);
+            $dom.searchBar.css('display', 'inline-flex');
+
+            $dom.openSearchButton.removeClass(classes.iconSearch);
+            $dom.openSearchButton.addClass(classes.iconClose);
+            $dom.openSearchButton.css('backgroundColor', '#fbfbfb'); //$grey collor
+            $dom.openSearchButton.css('border-bottom', '4px solid #53c1f2'); //$blue-light color
+            
+            isHidden = !isHidden;
+        } else {
+            $dom.searchBar.attr('hidden', 'true');
+            $dom.searchBar.css('display', 'none');
+
+            $dom.openSearchButton.removeClass('icon-close').addClass('icon-search');
+            $dom.openSearchButton.css('backgroundColor', '#fff'); 
+            $dom.openSearchButton.css('border-bottom', 'none');
+            isHidden = !isHidden;
+        }
+    })
+    
+    
+    // //Mobile navigation
+    let isHiddenNav = true;
+
+    $dom.mobileNavMenuButton.on('click', function(){
+        if (isHiddenNav === true) {
+            $dom.mobileNavMenuButton.removeClass(classes.iconMenu);
+            $dom.mobileNavMenuButton.addClass(classes.iconClose);
+            $dom.navigation.css('display', 'block');
+            isHiddenNav = !isHiddenNav;
+        } else {
+            $dom.mobileNavMenuButton.removeClass(classes.iconClose);
+            $dom.mobileNavMenuButton.addClass(classes.iconMenu);
+            $dom.navigation.css('display', 'none');
+            isHiddenNav = !isHiddenNav;
+        }
+    })
+    
 
 });

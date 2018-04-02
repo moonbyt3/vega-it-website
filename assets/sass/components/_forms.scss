@@ -48,6 +48,13 @@ input {
 .contact-form-right-section {
     width: 50%;
     padding-left: 65px;
+    input:nth-child(5) { // city
+        width: 49%;
+    }
+    input:nth-child(6) { // postal code
+        width: 49%;
+        float: right;
+    }
     
 }
 .contact-form-message {

@@ -62,10 +62,8 @@
 .material-name {
     position: relative;
     width: 100%;
-    
     &:hover {
         color: $blue-dark;
-        font-weight: 600;
         cursor: pointer;
     }
 }
@@ -74,7 +72,14 @@
     top: 10px;
     right: 10px;
 }
-
+.material-accordion-text {
+    opacity: 1;
+    transition: 1s ease;
+    
+}
+.material-accordion-text-hidden {
+    opacity: 0;
+}
 //tablet screen
 @media only screen and (max-width: 769px) and (min-width: 470px) { 
     .wrapper-materials {

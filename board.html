@@ -20,11 +20,11 @@
 
 		<nav class="navigation" >
 			<ul id="navigation" class="navigation-big clearfix">
-				<li><a class="button-nav" href="javascript:;">About VEGA</a></li>
-				<li><a class="button-nav" href="javascript:;">About Fragrances</a></li>
-				<li><a class="button-nav" href="javascript:;">Newsroom</a></li>
-				<li><a class="button-nav" href="javascript:;">Standards</a></li>
-				<li><a class="button-nav" href="javascript:;">Regulations</a></li>
+				<li><a class="button-nav" href="about.html">About VEGA</a></li>
+				<li><a class="button-nav" href="javascript:;" style="cursor: not-allowed">About Fragrances</a></li>
+				<li><a class="button-nav" href="javascript:;" style="cursor: not-allowed">Newsroom</a></li>
+				<li><a class="button-nav" href="materials.html">Standards</a></li>
+				<li><a class="button-nav" href="javascript:;" style="cursor: not-allowed">Regulations</a></li>
 			</ul>
 		</nav>
 
@@ -39,22 +39,22 @@
 	<main>
 		<nav class="navigation-plus navigation-plus-board clearfix">
             <ul>
-                <li><a href="javascript:;">VegaIT</a></li>
-                <li><a href="javascript:;">Membership</a></li>
+                <li><a href="about.html">VegaIT</a></li>
+                <li><a href="javascript:;" style="cursor: not-allowed">Membership</a></li>
                 <li class="nav-item-active"><a href="board.html">Board of directors</a></li>
-                <li><a href="javascript:;">VEGA team</a></li>
-                <li><a href="javascript:;">Contact us</a></li>
+                <li><a href="javascript:;" style="cursor: not-allowed">VEGA team</a></li>
+                <li><a href="javascript:;" style="cursor: not-allowed">Contact us</a></li>
             </ul>
         </nav>
         <div class="router-tittle">
             <h1 class="board-tittle">Board of directors</h1>
-            <select name="board-of-directors" id="board-of-dirs">
-                <option value="">Board of directors</option>
-                <option value="director2">John Smith</option>
-                <option value="director3">Bilbo Schwaggins</option>
-                <option value="director4">John Smith</option>
-                <option value="director5">John Doe</option>
-                <option value="director6">John Smite</option>
+            <select name="board-of-directors" id="board-of-dirs" onchange="location = this.value;">
+                <option value="about.html">VegaIT</option>
+                <option value="membership">Membership</option>
+                <option value="board-of-directors" selected>Board of directors</option>
+                <option value="vega-team">VEGA team</option>
+                <option value="contact-us">Contact us</option>
+                
             </select>
         </div>
         <div class="board-wrapper">

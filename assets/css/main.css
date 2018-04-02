@@ -423,7 +423,7 @@ pre {
   position: absolute;
   padding: 5px 20px;
   right: -20px;
-  bottom: -20px; }
+  bottom: -40px; }
 
 /*--------------------------------------------------------------
 ## Slicker slider buttons
@@ -483,7 +483,7 @@ pre {
     width: 62px; }
   .button-contact-form {
     bottom: 46px;
-    right: 13px; }
+    right: 20px; }
   .button-board-about {
     padding: 5px 10px;
     right: -8px;
@@ -536,11 +536,11 @@ pre {
     margin: 10px 5px; }
   .button-contact-form {
     bottom: 30px;
-    right: 0; }
+    right: 20px; }
   .button-board-about {
     padding: 0px 10px;
     right: 0px;
-    bottom: 4px; }
+    bottom: -30px; }
   .filter-button {
     display: block;
     width: 100%;
@@ -593,6 +593,11 @@ input {
 .contact-form-right-section {
   width: 50%;
   padding-left: 65px; }
+  .contact-form-right-section input:nth-child(5) {
+    width: 49%; }
+  .contact-form-right-section input:nth-child(6) {
+    width: 49%;
+    float: right; }
 
 .contact-form-message {
   margin-bottom: -5px; }
@@ -665,7 +670,8 @@ input {
 
 .header-logo {
   position: absolute;
-  padding: 20px 0 20px 60px; }
+  padding: 20px 0 20px 60px;
+  transition: .3s ease; }
   .header-logo img {
     height: 60px; }
 
@@ -724,8 +730,7 @@ input {
     max-height: 80px;
     padding: 30px 20px; }
   .sticky .header-logo {
-    padding: 10px 0 0 60px;
-    transition: .3s ease; }
+    padding: 10px 0 0 60px; }
   .sticky .searchbox {
     position: fixed;
     width: inherit;
@@ -906,7 +911,7 @@ input {
     content: '';
     display: block;
     width: 100%;
-    margin-top: -10px;
+    margin-top: -6px;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px solid #9a9a9a;
@@ -1303,14 +1308,14 @@ input {
   display: table-row; }
 
 .board-member {
-  min-height: 446px;
+  height: 466px;
   width: 25%;
   border-width: 0 1px 1px 0;
   border-style: solid;
   border-color: #9a9a9a;
   color: #cdcdcd;
   background-color: #fff;
-  transition: 1s ease;
+  transition: .5s ease;
   opacity: 1;
   visibility: visible; }
 
@@ -1518,13 +1523,19 @@ input {
   width: 100%; }
   .material-name:hover {
     color: #1073c7;
-    font-weight: 600;
     cursor: pointer; }
 
 .material-name-icon {
   position: absolute;
   top: 10px;
   right: 10px; }
+
+.material-accordion-text {
+  opacity: 1;
+  transition: 1s ease; }
+
+.material-accordion-text-hidden {
+  opacity: 0; }
 
 @media only screen and (max-width: 769px) and (min-width: 470px) {
   .wrapper-materials {
@@ -1630,8 +1641,6 @@ input {
     border-bottom: 1px solid black;
     width: 20%;
     transition: ease-in .3s; }
-  .about-article-heading:hover::after {
-    width: 100%; }
 
 .about-article-text {
   margin-top: 21px;
@@ -1690,7 +1699,8 @@ input {
   min-height: 420px;
   position: relative; }
   .about-third-group .about-article-picture {
-    background: url("../../images/background3.jpg"); }
+    background: url("../../images/background3.jpg");
+    background-size: cover; }
   .about-third-group::after {
     content: '';
     display: block;
@@ -1719,17 +1729,14 @@ input {
       font-size: 18px; }
 
 .about-location-text-heading {
-  position: relative; }
+  position: absolute;
+  color: black; }
   .about-location-text-heading::after {
     content: '';
     display: block;
     position: absolute;
     border-bottom: 1px solid black;
-    bottom: 4px;
-    width: 24%;
-    transition: ease-in .3s; }
-  .about-location-text-heading:hover::after {
-    width: 50%; }
+    bottom: 4px; }
 
 .about-location-phone {
   margin-top: 30px;
@@ -1847,7 +1854,8 @@ input {
 
 .location-heading {
   font-size: 15px;
-  font-weight: 800; }
+  font-weight: 800;
+  color: black; }
 
 .location-address {
   margin: 30px 2px;
@@ -1977,17 +1985,14 @@ input {
       visibility: visible;
       transform: translateY(0); }
 
-.modal-content-image {
-  width: 100%;
-  margin-bottom: 10px; }
-
 .modal .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 30%;
+  text-align: center;
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
@@ -2004,39 +2009,14 @@ input {
       text-decoration: none;
       cursor: pointer; }
 
-.modal .product-holder {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: 30vh;
-  left: 34vw;
-  z-index: 1;
-  cursor: auto;
-  min-width: 200px;
-  min-height: 100px;
-  width: auto;
-  height: auto; }
-  .modal .product-holder .closer::before {
-    box-sizing: content-box;
-    border-radius: 100%;
-    border: solid 3px rgba(255, 255, 255, 0.5);
-    text-align: center;
-    color: #efefef;
-    display: block;
-    font-size: 1em;
-    height: 1.75em;
-    width: 1.75em;
-    line-height: 1.75em;
-    margin: -0.875em 0 0 -0.875em;
-    position: absolute;
-    top: 3%;
-    right: 0; }
-  .modal .product-holder img {
-    max-height: 500px; }
-
-@media only screen and (max-width: 421px) {
+@media screen and (max-width: 1046px) {
   .modal .modal-content {
-    width: 80% !important; } }
+    width: 80%; } }
+
+@media screen and (max-width: 420px) {
+  .modal-content-image {
+    width: 100%;
+    margin-bottom: 10px; } }
 
 .clearfix::after {
   content: "";
@@ -2050,10 +2030,6 @@ input {
     background-color: #fcc401;
     color: #fff;
     cursor: not-allowed; }
-
-.half-space {
-  width: 48% !important;
-  margin-left: 1.5%; }
 
 .router-tittle {
   height: 100px;

@@ -21,11 +21,7 @@
         width: 20%;
         transition: ease-in .3s;
     }
-    &:hover {
-        &::after {
-            width: 100%;
-        }
-    }
+    
 }
 .about-article-text {
     margin-top: 21px;
@@ -94,6 +90,7 @@
     position: relative;
     .about-article-picture {
         background: url('../../images/background3.jpg');
+        background-size: cover;
     }
     &::after {
         content: '';
@@ -129,20 +126,14 @@
     }
 }
 .about-location-text-heading {
-    position: relative;
+    position: absolute;
+    color: black;
     &::after {
         content: '';
         display: block;
         position: absolute;
         border-bottom: 1px solid black;
         bottom: 4px;
-        width: 24%;
-        transition: ease-in .3s;
-    }
-    &:hover {
-        &::after {
-            width: 50%;
-        }
     }
 }
 .about-location-phone {
